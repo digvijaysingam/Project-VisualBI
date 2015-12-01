@@ -1,0 +1,39 @@
+.nav-list {
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 0;
+}
+
+.nav-list-main {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-bottom: 0;
+}
+
+span.nav-toggle-icon{
+  font-size: 7px;
+  top: -2px;
+  color: #888;
+}
+
+.dimensions,.measures{
+  height: auto;
+  min-height: 250px;
+  max-height: 250px;
+  overflow-y: scroll ;
+}
+
+.left-col {
+  border: 1px solid;
+  padding: 0;
+}
+
+.left-col hr {
+  margin: 0;
+  border-top: 1px solid;
+}
+.left-col h4 {
+  margin: 0;
+  padding: 10px;;
+  background-color: lightgrey;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- Mobile viewport optimized -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Bootstrap CSS -->
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<!-- <link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet"> -->
+
+		<!-- Custom CSS -->
+		<link href="css/mystyles2.css" rel="stylesheet">
+
+		<!-- Include Modernizr in the head, before any other Javascript -->
+		<script src="bootstrap/js/modernizr-2.6.2.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-xs-3 left-col">
+        <h4>Steel Wheels</h4>
+        <ul class="nav nav-list-main ">
+          <li><a href="#">Change</a></li>
+          <li><a href="#">Change</a></li>
+          <li><a href="#">Change</a></li>
+        </ul>
+        <hr>
+        <div>
+          <h4>Dimensions</h4>
+          <ul class="nav nav-list-main dimensions">
+            <li><label class="nav-toggle nav-header"><span class="nav-toggle-icon glyphicon glyphicon-chevron-right"></span> <a href="#">Header 1</a></label>
+                  <ul class="nav nav-list nav-left-ml">
+                      <li><a href="#">Link</a></li>
+                      <li><a href="#">Link</a></li>
+                      <li><label class="nav-toggle nav-header"><span class="nav-toggle-icon glyphicon glyphicon-chevron-right"></span> <a href="#">Header 1.1</a></label>
+                          <ul class="nav nav-list nav-left-ml">
+                              <li><a href="#">Link</a></li>
+                              <li><a href="#">Link</a></li>
+                              <li><label class="nav-toggle nav-header"><span class="nav-toggle-icon glyphicon glyphicon-chevron-right"></span> <a href="#">Header 1.1.1</a></label>
+                                  <ul class="nav nav-list nav-left-ml">
+                                      <li><a href="#">Link</a></li>
+                                      <li><a href="#">Link</a></li>
+                                  </ul>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+              </li>
+          </ul>
+        </div>
+        <hr>
+        <div class="measures">
+          <h4>Measures</h4>
+          <!-- <script id=measures type=template>
+            <ul>
+              <li>{{item}} </li>
+            </ul>
+          </script> -->
+
+        </div>
+      </div>
+    </div>
+
+<script src="js/jquery-2.1.4.js"></script>
+<script>
+var jqxhr = $.getJSON( "json/measures.json", function() {
+  console.log( "success" );
+})
+  .done(function() {
+    console.log( "second success" );
+  })
+  .fail(function() {
+    console.log( "error" );
+  })
+  .always(function() {
+    console.log( "complete" );
+  });
+
+// Perform other work here ...
+
+// Set another completion function for the request above
+jqxhr.complete(function() {
+  $.getJSON( "json/measures.json", function( data ) {
+  var items = [];
+  $.each( data, function( key, val ) {
+    items.push( "<li><a href='#'>" + val + "</a></li>" );
+  });
+
+  $( "<ul/>", {
+    "class": "nav nav-list-main ",
+    html: items.join( "" )
+  }).appendTo( "div.measures" );
+});
+});
+</script>
+<!-- Bootstrap JS -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Custom JS -->
+<script src="js/myscript2.js"></script>
+  </body>
+</html>
