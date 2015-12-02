@@ -11,8 +11,9 @@
 }
 
 span.nav-toggle-icon{
-  font-size: 7px;
-  top: -2px;
+  margin-right: 5px;
+  font-size: 10px;
+  top: -1px;
   color: #888;
 }
 
@@ -21,19 +22,54 @@ span.nav-toggle-icon{
   min-height: 250px;
   max-height: 250px;
   overflow-y: scroll ;
+  border-right: 1px solid;
 }
 
-.left-col {
+.dimensions {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.dimensions a{
+  text-decoration: none;
+}
+.left-menu {
   border: 1px solid;
   padding: 0;
 }
 
-.left-col hr {
+.left-menu hr {
   margin: 0;
   border-top: 1px solid;
 }
-.left-col h4 {
+.left-menu h4 {
   margin: 0;
   padding: 10px;;
   background-color: lightgrey;
+}
+
+.myRect {
+  margin-bottom: 3px;
+  border: 1px solid #e3e3e3;
+  border-radius: 1px;
+}
+
+.myRect .col-xs-2{
+  background-color: #e3e3e3;
+}
+
+.myRect h3 {
+  margin-top: 10px;
+}
+
+.myRect .col-xs-10 {
+  padding-top: 6px;
+}
+
+.columns ul li {
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 5px;
+  background: green;
+  padding: 3px;
+  color: white;
 }

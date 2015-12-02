@@ -8,96 +8,88 @@
 
 		<!-- Bootstrap CSS -->
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<!-- <link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet"> -->
-
 		<!-- Custom CSS -->
 		<link href="css/mystyles2.css" rel="stylesheet">
 
 		<!-- Include Modernizr in the head, before any other Javascript -->
-		<script src="bootstrap/js/modernizr-2.6.2.min.js"></script>
+		<script src="js/modernizr-2.6.2.min.js"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="col-xs-3 left-col">
-        <h4>Steel Wheels</h4>
-        <ul class="nav nav-list-main ">
-          <li><a href="#">Change</a></li>
-          <li><a href="#">Change</a></li>
-          <li><a href="#">Change</a></li>
-        </ul>
-        <hr>
-        <div>
-          <h4>Dimensions</h4>
-          <ul class="nav nav-list-main dimensions">
-            <li><label class="nav-toggle nav-header"><span class="nav-toggle-icon glyphicon glyphicon-chevron-right"></span> <a href="#">Header 1</a></label>
-                  <ul class="nav nav-list nav-left-ml">
-                      <li><a href="#">Link</a></li>
-                      <li><a href="#">Link</a></li>
-                      <li><label class="nav-toggle nav-header"><span class="nav-toggle-icon glyphicon glyphicon-chevron-right"></span> <a href="#">Header 1.1</a></label>
-                          <ul class="nav nav-list nav-left-ml">
-                              <li><a href="#">Link</a></li>
-                              <li><a href="#">Link</a></li>
-                              <li><label class="nav-toggle nav-header"><span class="nav-toggle-icon glyphicon glyphicon-chevron-right"></span> <a href="#">Header 1.1.1</a></label>
-                                  <ul class="nav nav-list nav-left-ml">
-                                      <li><a href="#">Link</a></li>
-                                      <li><a href="#">Link</a></li>
-                                  </ul>
-                              </li>
-                          </ul>
-                      </li>
-                  </ul>
-              </li>
-          </ul>
-        </div>
-        <hr>
-        <div class="measures">
-          <h4>Measures</h4>
-          <!-- <script id=measures type=template>
-            <ul>
-              <li>{{item}} </li>
+    <div class="container" id="main">
+      <div class="row">
+        <div class="col-xs-3 left-menu">
+          <div class="steel-wheels"><!--name change -->
+            <h4>Steel Wheels</h4>
+            <ul class="nav nav-list-main">
+              <li><a href="#">Change</a></li>
+              <li><a href="#">Change</a></li>
             </ul>
-          </script> -->
+          </div>
+          <hr>
+          <div class='dim-div'>
+            <h4>Dimensions</h4>
+            <!-- adding dimensions from json -->
+          </div>
+          <hr>
 
+          <div class="measures-div">
+            <h4>Measures</h4>
+            <!-- adding measures from json -->
+          </div>
         </div>
+
+        <div class="col-xs-8">
+          <div class="row myRect">
+            <div class="col-xs-2">
+              <h4>Columns</h4>
+            </div>
+            <div class="col-xs-10 columns">
+              <ul class="nav">
+                <li class="placeholder">Drag measures/dimensions here</li>
+              </ul>
+            </div> <!-- col-xs-10 end-->
+          </div> <!-- myRect end-->
+
+          <div class="row myRect">
+            <div class="col-xs-2">
+              <h4>Rows</h4>
+            </div>
+            <div class="col-xs-10 columns">
+              <ul class="nav">
+                <li class="placeholder">Drag measures/dimensions here</li>
+              </ul>
+            </div> <!-- col-xs-10 end-->
+          </div> <!-- myRect end-->
+
+          <div class="row myRect">
+            <div class="col-xs-2">
+              <h4>Filters</h4>
+            </div>
+            <div class="col-xs-10 columns">
+              <ul class="nav">
+                <li class="placeholder">Drag measures/dimensions here</li>
+              </ul>
+            </div> <!-- col-xs-10 end-->
+          </div> <!-- myRect end-->
+        </div> <!-- col-xs-8 end-->
+
       </div>
     </div>
 
-<script src="js/jquery-2.1.4.js"></script>
-<script>
-var jqxhr = $.getJSON( "json/measures.json", function() {
-  console.log( "success" );
-})
-  .done(function() {
-    console.log( "second success" );
-  })
-  .fail(function() {
-    console.log( "error" );
-  })
-  .always(function() {
-    console.log( "complete" );
-  });
+  <script src="js/jquery-2.1.4.js"></script>
 
-// Perform other work here ...
+  <script src="js/jquery-ui.min.js"></script>
 
-// Set another completion function for the request above
-jqxhr.complete(function() {
-  $.getJSON( "json/measures.json", function( data ) {
-  var items = [];
-  $.each( data, function( key, val ) {
-    items.push( "<li><a href='#'>" + val + "</a></li>" );
-  });
+  <!-- for adding dimensions from json -->
+  <script src='js/dimensions.js'></script>
 
-  $( "<ul/>", {
-    "class": "nav nav-list-main ",
-    html: items.join( "" )
-  }).appendTo( "div.measures" );
-});
-});
-</script>
-<!-- Bootstrap JS -->
-<script src="bootstrap/js/bootstrap.min.js"></script>
+  <!-- for adding measures from json -->
+  <script src='js/measures.js'></script>
 
-<!-- Custom JS -->
-<script src="js/myscript2.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src='js/myscript2.js'></script>
   </body>
 </html>
