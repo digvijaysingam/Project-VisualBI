@@ -1,3 +1,7 @@
+#main {
+  margin-top: 20px;
+}
+
 .nav-list {
   padding-right: 10px;
   padding-left: 10px;
@@ -18,53 +22,79 @@ span.nav-toggle-icon{
 }
 
 .dimensions,.measures{
-  height: auto;
-  min-height: 250px;
-  max-height: 250px;
+  padding-top: 10px;
+  height: 250px;
   overflow-y: scroll ;
   border-right: 1px solid;
 }
 
 .dimensions {
-  margin-top: 10px;
   margin-left: 10px;
 }
+
 .dimensions a{
   text-decoration: none;
 }
-.left-menu {
+
+.nav>li>a {
+  padding-top: 0;
+}
+
+#left-menu {
   border: 1px solid;
   padding: 0;
 }
 
-.left-menu hr {
+#left-menu hr {
   margin: 0;
   border-top: 1px solid;
 }
-.left-menu h4 {
+
+#left-menu h4 {
   margin: 0;
   padding: 10px;;
   background-color: lightgrey;
 }
 
+.navbar {
+  background-color: #eee;
+  position: absolute;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar .btn {
+  font-size: 17px;
+}
+#content {
+  padding-top: 60px;
+  position: relative;
+  border: 1px solid;
+}
+
+#content-wrapper {
+  height: 600px;
+  overflow-y: scroll;
+  padding: 15px;
+}
+
 .myRect {
-  margin-bottom: 3px;
+  margin-bottom: 5px;
   border: 1px solid #e3e3e3;
-  border-radius: 1px;
+  border-radius: 4px;
 }
 
 .myRect .col-xs-2{
   background-color: #e3e3e3;
 }
 
-.myRect h3 {
-  margin-top: 10px;
-}
-
 .myRect .col-xs-10 {
   padding-top: 6px;
 }
 
+.columns ul {
+  min-height: 30px;
+}
 .columns ul li {
   display: inline-block;
   margin-right: 8px;
@@ -72,4 +102,14 @@ span.nav-toggle-icon{
   background: green;
   padding: 3px;
   color: white;
+}
+
+li.placeholder {
+  background-color: #fff !important;
+  color: #808080 !important;
+  font-style: italic;
+}
+
+button.close {
+  margin-left: 5px;
 }

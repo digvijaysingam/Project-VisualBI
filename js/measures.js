@@ -1,7 +1,7 @@
 // Ref:"http://api.jquery.com/jquery.getjson/"
 
 (function(){
-  var jqxhr = $.getJSON( "measures.json", function() {
+  var jqxhr = $.getJSON( "../json/measures.json", function() {
     console.log( "measures-success" );
   })
     .done(function() {
@@ -16,16 +16,15 @@
 
   //Completion function for the request above
   jqxhr.complete(function() {
-    $.getJSON( "measures.json", function( data ) {
-    var items = [];
-    $.each( data, function( key, val ) {
-      items.push( "<li><a href='#'>" + val + "</a></li>" );
+    $.getJSON( "../json/measures.json", function( data ) {
+      $.each( data, function( key, val ) {
+        //items.push( "<li><a href='#'>" + val + "</a></li>" );
+        var li = $("<li><a href='#'>" + val + "</a></li>");
+        li.appendTo('#measures-div ul').find('a').draggable({
+          appendTo: "body",
+          helper: "clone"
+        });
+      });
     });
-
-    $( "<ul/>", {
-      "class": "nav nav-list-main measures",
-      html: items.join( "" )
-    }).appendTo( "div.measures-div" );
-  });
   });
 })();

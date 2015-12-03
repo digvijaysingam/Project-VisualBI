@@ -1,7 +1,7 @@
 // Ref:"http://api.jquery.com/jquery.getjson/"
 
 (function(){
-  var jqxhr = $.getJSON( "dim.json", function() {
+  var jqxhr = $.getJSON( "../json/dim.json", function() {
     console.log( "dimensions-success" );
   })
     .done(function() {
@@ -16,7 +16,7 @@
 
   // Completion function for the request above
   jqxhr.complete(function() {
-    $.getJSON( "dim.json", function( json ) {
+    $.getJSON( "../json/dim.json", function( json ) {
       // ref:"http://www.jqwidgets.com/building-menu-from-json/"
       var data = json.dim;
       var builddata = function () {
@@ -45,7 +45,7 @@
       return source;
     }
     var source = builddata();
-    
+
 
     var buildUL = function (parent, items) {
         $.each(items, function () {
@@ -64,14 +64,14 @@
                 if (this.items && this.items.length > 0) {
                     li.addClass("")
                     var ul = $("<ul class='nav nav-list nav-left-ml'></ul>");
-                    ul.appendTo(li);
+                    ul.appendTo(li).toggle();
                     buildUL(ul, this.items);
                 }
             }
         });
     }
     var ul = $("<ul class='nav nav-list-main dimensions'></ul>");
-    ul.appendTo("div.dim-div");
+    ul.appendTo("div#dim-div");
     buildUL(ul, source);
   });//---end getJSON
 });//----end jqxhr.complete
