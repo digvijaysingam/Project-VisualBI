@@ -1,7 +1,7 @@
 (function(){
   //$('ul.nav-left-ml').toggle();
 
-  $('#dim-div').on('click', 'label' , function () {
+  $('#dim-div,#measures-div').on('click', 'label' , function () {
 
     $this = $(this).children('span');
     $this.parent().parent().children('ul.nav-left-ml').toggle(300);
@@ -34,7 +34,7 @@
   $('.columns').on('click', 'button' , function () {
     var pt = $(this).parent().parent().parent();
     $(this).parent().remove();
-    var len = pt.children('ul li').length;
+    var len = pt.find('ul li').length;
     console.log(len);
     if(len == 0) {
       $("<li class='placeholder'>Drag measures/dimensions here</li>").appendTo(pt.children('ul'));
