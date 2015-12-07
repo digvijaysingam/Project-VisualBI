@@ -18,23 +18,23 @@
     <div class="container-fluid" id="main">
       <div class="row">
         <div class="col-xs-2" id= "left-menu">
-          <div id="head-div">
+          <div id="left-menu-wrapper">
             <h4>Steel Wheels</h4>
-            <ul class="nav nav-list-main">
-              <li><a href="#">Change</a></li>
-              <li><a href="#">Change</a></li>
-            </ul>
-          </div> <!-- head-div end-->
-          <hr>
-          <div id='dim-div'>
+            <div id="head-div">
+              <ul class="nav nav-list-main">
+                <li><a href="#">Change</a></li>
+                <li><a href="#">Change</a></li>
+              </ul>
+            </div> <!-- head-div end-->
             <h4>Dimensions</h4>
-            <!-- adding dimensions from json -->
-          </div>
-          <hr>
-          <div id="measures-div">
+            <div id='dim-div'>
+              <!-- adding dimensions from json -->
+            </div>
             <h4>Measures</h4>
-            <!-- adding measures from json -->
-          </div>
+            <div id="measures-div">
+              <!-- adding measures from json -->
+            </div>
+          </div> <!-- left-menu-wrapper end-->
         </div> <!-- left-menu end-->
         <div class="col-xs-9" id="content">
           <div class="navbar navbar-fixed-top">
@@ -108,22 +108,24 @@
             </div> <!-- row end-->
           </div> <!-- content-wrapper end-->
         </div> <!-- col-xs-8 end-->
-        <div class="col-xs-1">
-          <div class="btn-group-vertical" role="group">
-            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk"></span></button>
-            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-print"></span></button>
-            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download-alt"></span></button>
-            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk"></span></button>
-            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-print"></span></button>
-            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download-alt"></span></button>
-            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk"></span></button>
-            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-print"></span></button>
-            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download-alt"></span></button>
-            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk"></span></button>
-            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-print"></span></button>
-            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download-alt"></span></button>
-          </div>
-        </div>
+        <div class="col-xs-1" id="right-menu">
+          <div class="right-menu-wrapper">
+            <div class="btn-group-vertical" role="group">
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk"></span></button>
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-print"></span></button>
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download-alt"></span></button>
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk"></span></button>
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-print"></span></button>
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download-alt"></span></button>
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk"></span></button>
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-print"></span></button>
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download-alt"></span></button>
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk"></span></button>
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-print"></span></button>
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download-alt"></span></button>
+            </div> <!-- btn-group end -->
+          </div> <!-- menu-wrapper-end -->
+        </div> <!-- right-menu end -->
       </div> <!-- row end-->
     </div> <!--container main end -->
 
@@ -144,6 +146,6 @@
 
   <!-- Custom JS -->
   <script src='js/myscript2.js'></script>
-  <script src="js/level0_2hierarchy.js"></script>
+  <script src="js/GeneralizedHierarchy.js"></script>
   </body>
 </html>
